@@ -35,7 +35,9 @@ randomColor <- function(count=1,
 #'
 #' @param k number of colors (>= 1)
 #' @return A character vector of k optimally distinct colors in hexadecimal codes.
+#' @export
 randomColorPalette <-function(k=1) {
-  km <- kmeans(ourColorSpace@coords, k)
+  # Set iter.max to 20 to avoid convergence warnings.
+  km <- kmeans(ourColorSpace@coords, k, iter.max=20)
   hex(LAB(km$centers))
 }
