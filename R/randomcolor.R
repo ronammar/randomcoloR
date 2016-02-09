@@ -29,5 +29,13 @@ randomColor <- function(count=1,
 }
 
 
+#' Generate palettes of optimally distinct colors.
+#' Based on the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
+#' For more info, also see https://en.wikipedia.org/wiki/Lab_color_space
+#'
+#' @param k number of colors (>= 1)
+#' @return A character vector of k optimally distinct colors in hexadecimal codes.
 randomColorPalette <-function(k=1) {
+  km <- kmeans(ourColorSpace@coords, k)
+  hex(LAB(km$centers))
 }
