@@ -6,7 +6,7 @@ ourColorSpace <- NULL
 
 .onLoad <- function(libname, pkgname){
   ct <<- v8()
-  ct$source("js/randomColor.js")
+  ct$source(system.file("js/randomColor.js", package=pkgname))
 
   # Compute a 30000 color spectrum and convert to LAB
   ourColorSpace <<- colorspace::RGB(runif(30000), runif(30000), runif(30000))
