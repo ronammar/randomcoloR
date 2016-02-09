@@ -30,7 +30,7 @@ randomColor <- function(count=1,
 
 
 #' Generate palettes of optically distinct colors.
-#' Inspired by the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
+#' @description Inspired by the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
 #' For more info, also see https://en.wikipedia.org/wiki/Lab_color_space
 #'
 #' @param k number of colors (>= 1). May be ineffective for k > 40.
