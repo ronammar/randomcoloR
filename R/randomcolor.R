@@ -29,11 +29,11 @@ randomColor <- function(count=1,
 }
 
 
-#' Generate palettes of optimally distinct colors.
+#' Generate palettes of optically distinct colors.
 #' Inspired by the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
 #' For more info, also see https://en.wikipedia.org/wiki/Lab_color_space
 #'
-#' @param k number of colors (>= 1)
+#' @param k number of colors (>= 1). May be ineffective for k > 40.
 #' @return A character vector of k optimally distinct colors in hexadecimal codes.
 #' @export
 randomColorPalette <-function(k=1) {
