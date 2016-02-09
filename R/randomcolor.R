@@ -1,12 +1,20 @@
 # Author: Ron Ammar
 # Description: Get pretty random colors in R. Wraps randomColor.js.
 
-library(stringr)
-library(V8)
-
-ct <- v8()
-ct$source("js/randomColor.js")
-
+#' Get a pretty random color.
+#'
+#' @param count number of colors (>= 1)
+#' @param hue The hue of the colors to be selected.
+#' @param luminosity The luminosity of the colors to be selected.
+#' @return A character vector of random color hexadecimal codes.
+#' @examples
+#' randomColor()
+#'
+#' randomColor(hue="pink")
+#'
+#' randomColor(10, luminosity="light")
+#' @export
+#' @import stringr
 randomColor <- function(count=1,
                          hue=c(" ", "random", "red", "orange", "yellow", "green", "blue", "purple", "pink", "monochrome"),
                          luminosity=c(" ", "random", "light", "bright", "dark")
@@ -20,5 +28,6 @@ randomColor <- function(count=1,
   ), ",")[[1]]
 }
 
-# randomColorPalette(k=1) {
-#}
+
+randomColorPalette <-function(k=1) {
+}
