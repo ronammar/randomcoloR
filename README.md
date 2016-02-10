@@ -41,7 +41,7 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(aes(fill=region), color="black") +
   guides(fill=FALSE)
 ```
-*Which state is pink?*
+*Which states are green?*
 ![](demo/map1.png)
 
 Instead, let's find the most distinctive set of colors for all states.
@@ -53,5 +53,5 @@ states_map <- left_join(states_map, df, by="region")
 ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(fill=states_map$newColor, color="black")
 ```
-*Now, which state is pink?*
+*Now, which states are green?*
 ![](demo/map2.png)
