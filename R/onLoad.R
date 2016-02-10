@@ -1,9 +1,9 @@
-#' Execute upon loading.
-#' @import V8 colorspace
+# Execute upon loading.
 
 ct <- NULL
 ourColorSpace <- NULL
 
+#' @import V8 colorspace
 .onLoad <- function(libname, pkgname){
   ct <<- v8()
   ct$source(system.file("js/randomColor.js", package=pkgname))
