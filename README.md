@@ -2,4 +2,4 @@
 
 An [R](https://www.r-project.org/) package for generating attractive colors.
 
-This is a port of [randomColor.js](https://github.com/davidmerfield/randomColor)
+The `randomColor()` function is ported from [randomColor.js](https://github.com/davidmerfield/randomColor).
