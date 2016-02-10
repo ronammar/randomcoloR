@@ -22,7 +22,7 @@ plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
 ```
 ![](demo/graph2.png)
 
-We can also get random colors with different luminosity.
+We can also get random colors with specific luminosity.
 ```r
 plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
      edge.lty="blank", vertex.color=randomColor(k, luminosity="light"))
