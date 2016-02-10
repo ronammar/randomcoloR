@@ -31,7 +31,6 @@ plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
 
 We can also ask for a set of optimally distinct colors so that colors in our plot are not too similar.
 If we use `ggplot2` to select the color space for our states in the map below, we get many similar colors.
-Which state is pink?
 ```r
 library(dplyr)
 library(ggplot2)
@@ -42,10 +41,10 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(aes(fill=region), color="black") +
   guides(fill=FALSE)
 ```
+*Which state is pink?*
 ![](demo/map1.png)
 
 Instead, let's find the most distinctive set of colors for all states.
-Which state is pink below?
 ```r
 s <- unique(states_map$region)
 df <- data.frame(region=s, newColor=distinctColorPalette(length(s)),
@@ -54,4 +53,5 @@ states_map <- left_join(states_map, df, by="region")
 ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(fill=states_map$newColor, color="black")
 ```
+*Now, which state is pink?*
 ![](demo/map2.png)
