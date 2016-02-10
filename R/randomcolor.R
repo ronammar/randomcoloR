@@ -29,7 +29,7 @@ randomColor <- function(count=1,
 }
 
 
-#' Generate palettes of optically distinct colors.
+#' Generate palettes of optimally distinct colors.
 #' @description Inspired by the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
 #' For more info, also see https://en.wikipedia.org/wiki/Lab_color_space
 #'

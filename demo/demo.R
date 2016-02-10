@@ -41,7 +41,7 @@ df <- data.frame(region=s, newColor=distinctColorPalette(length(s)),
                  stringsAsFactors=FALSE)
 states_map <- left_join(states_map, df, by="region")
 
-# Now, which state is pink below? The colors are more optically distinct now.
+# Now, which state is pink below? The colors are more optimally distinct now.
 ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(fill=states_map$newColor, color="black")
 ggsave("demo/map2.png", device="png", width=7, height=4)
