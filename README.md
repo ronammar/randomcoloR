@@ -1,6 +1,6 @@
 # randomcoloR
 
-An [R](https://www.r-project.org/) package for generating attractive colors.
+An [R](https://www.r-project.org/) package for generating attractive and distinctive colors.
 
 The `randomColor()` function is ported from [randomColor.js](https://github.com/davidmerfield/randomColor).
 
