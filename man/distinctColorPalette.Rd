@@ -2,7 +2,7 @@
 % Please edit documentation in R/randomcolor.R
 \name{distinctColorPalette}
 \alias{distinctColorPalette}
-\title{Generate palettes of optically distinct colors.}
+\title{Generate palettes of optimally distinct colors.}
 \usage{
 distinctColorPalette(k = 1)
 }
