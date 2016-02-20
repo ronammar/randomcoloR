@@ -1,7 +1,7 @@
 Package: randomcoloR
 Type: Package
 Title: Generate attractive random colors.
-Version: 0.1.0
+Version: 1.0.0
 Date: 2016-02-09
 Author: Ron Ammar
 Maintainer: Ron Ammar <ron.ammar@gmail.com>
