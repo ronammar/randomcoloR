@@ -1,15 +1,17 @@
 Package: randomcoloR
 Type: Package
-Title: Generate attractive random colors.
+Title: Generate Attractive Random Colors
 Version: 1.0.0
 Date: 2016-02-09
 Author: Ron Ammar
 Maintainer: Ron Ammar <ron.ammar@gmail.com>
-Description: Random colors are from a wrapper of randomColor.js. The optimally
-  distinct colors are based on kmeans inspired by IWantHue.
+Description: Random colors are from a wrapper of 'randomColor.js'. The optimally
+  distinct colors are based on k-means inspired by 'IWantHue'.
 License: CC0
 LazyData: TRUE
 RoxygenNote: 5.0.1
 Imports: colorspace,
     stringr,
-    V8
+    V8,
+    stats,
+    methods

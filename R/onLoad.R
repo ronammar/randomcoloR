@@ -3,7 +3,7 @@
 ct <- NULL
 ourColorSpace <- NULL
 
-#' @import V8 colorspace
+#' @import V8 colorspace stats methods
 .onLoad <- function(libname, pkgname){
   ct <<- v8()
   ct$source(system.file("js/randomColor.js", package=pkgname))
