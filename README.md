@@ -13,21 +13,21 @@ k <- 200
 plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
      edge.lty="blank", vertex.color=randomColor(k))
 ```
-![](demo/graph1.png)
+![](readme_demo/graph1.png)
 
 We can specify a particular hue, such as red.
 ```r
 plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
      edge.lty="blank", vertex.color=randomColor(k, hue="red"))
 ```
-![](demo/graph2.png)
+![](readme_demo/graph2.png)
 
 We can also get random colors with specific luminosity.
 ```r
 plot(erdos.renyi.game(k, 0.1), vertex.label=NA,
      edge.lty="blank", vertex.color=randomColor(k, luminosity="light"))
 ```
-![](demo/graph3.png)
+![](readme_demo/graph3.png)
 
 We can also ask for a set of optimally distinct colors so that colors in our plot are not too similar.
 If we use `ggplot2` to select the color space for our states in the map below, we get many similar colors.
@@ -42,7 +42,7 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
   guides(fill=FALSE)
 ```
 *Which states are green?*
-![](demo/map1.png)
+![](readme_demo/map1.png)
 
 Instead, let's find the most distinctive set of colors for all states.
 ```r
@@ -54,7 +54,7 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(fill=states_map$newColor, color="black")
 ```
 *Now, which states are green?*
-![](demo/map2.png)
+![](readme_demo/map2.png)
 
 ## Installation from Github
 
