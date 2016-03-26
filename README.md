@@ -55,3 +55,10 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
 ```
 *Now, which states are green?*
 ![](demo/map2.png)
+
+## Installation from Github
+
+To install this package from the R console, type:
+```r
+devtools::install_git("https://github.com/ronammar/randomcoloR")
+```
