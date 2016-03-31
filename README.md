@@ -58,7 +58,11 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
 
 ## Installation from Github
 
-To install this package from the R console, type:
+To install this package from Github via the R console, type:
 ```r
 devtools::install_git("https://github.com/ronammar/randomcoloR")
+```
+It's also on [CRAN](https://cran.r-project.org/web/packages/randomcoloR/):
+```r
+install.packages("randomcoloR")
 ```
