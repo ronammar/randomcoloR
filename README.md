@@ -56,6 +56,16 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
 *Now, which states are green?*
 ![](readme_demo/map2.png)
 
+When using `ggplot2`, we can specify a custom color palette.
+```r
+ggplot(mtcars, aes(x=disp, y=mpg, col=as.factor(gear))) +
+  geom_point(size=5) +
+  scale_colour_manual(values=randomColor(length(unique(mtcars$gear)), luminosity="light")) +
+  theme_bw()
+```
+![](readme_demo/mtcars_custom_palette.png)
+
+
 ## Installation from Github
 
 To install this package from Github via the R console, type:
