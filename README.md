@@ -1,3 +1,5 @@
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomcoloR)](https://cran.r-project.org/package=randomcoloR)
+
 # randomcoloR
 
 An [R](https://www.r-project.org/) package for generating attractive and distinctive colors.
