@@ -39,5 +39,5 @@ randomColor <- function(count=1,
 distinctColorPalette <-function(k=1) {
   # Set iter.max to 20 to avoid convergence warnings.
   km <- kmeans(ourColorSpace@coords, k, iter.max=20)
-  hex(LAB(km$centers))
+  unname(hex(LAB(km$centers)))
 }
