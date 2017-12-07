@@ -11,6 +11,7 @@ Description: Simple methods to generate attractive random colors. The random
   optimally distinct colors based on k-means (inspired by 'IWantHue'
   <https://github.com/medialab/iwanthue>).
 License: CC0
+BugReports: https://github.com/ronammar/randomcoloR/issues
 LazyData: TRUE
 RoxygenNote: 5.0.1
 Imports: colorspace,

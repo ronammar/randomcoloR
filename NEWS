@@ -3,13 +3,11 @@ randomcoloR 1.1.0
 
 NEW FEATURES
 
-*
+* Alternate color palette for distinct colors
 
-*
+* t-SNE preprocessing of color space
 
 MINOR IMPROVEMENTS
 
 * distinctColorPalette() no longer outputs a named vector, improving compatibility
   with ggplot2 (where color names are meaningful)
-
-*
