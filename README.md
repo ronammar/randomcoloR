@@ -39,6 +39,7 @@ library(ggplot2)
 library(maps)
 
 states_map <- map_data("state")
+
 ggplot(states_map, aes(x=long, y=lat, group=group)) +
   geom_polygon(aes(fill=region), color="black") +
   guides(fill=FALSE)
@@ -48,12 +49,10 @@ ggplot(states_map, aes(x=long, y=lat, group=group)) +
 
 Instead, let's find the most distinctive set of colors for all states.
 ```r
-s <- unique(states_map$region)
-df <- data.frame(region=s, newColor=distinctColorPalette(length(s)),
-                 stringsAsFactors=FALSE)
-states_map <- left_join(states_map, df, by="region")
-ggplot(states_map, aes(x=long, y=lat, group=group)) +
-  geom_polygon(fill=states_map$newColor, color="black")
+ggplot(states_map, aes(x=long, y=lat, group=group, fill=region)) +
+  geom_polygon(color="black") +
+  scale_fill_manual(values=distinctColorPalette(length(unique(states_map$region)))) +
+  guides(fill=FALSE)
 ```
 *Now, which states are green?*
 ![](readme_demo/map2.png)
@@ -67,6 +66,32 @@ ggplot(mtcars, aes(x=disp, y=mpg, col=as.factor(gear))) +
 ```
 ![](readme_demo/mtcars_custom_palette.png)
 
+You can use the default color space.
+
+```r
+set.seed(8675309)
+
+scales::show_col(distinctColorPalette(12), labels=FALSE)
+```
+
+![](readme_demo/default_cs_12.png)
+
+Or an alternate color space.
+
+```r
+scales::show_col(distinctColorPalette(12, altCol=TRUE), labels=FALSE)
+```
+
+![](readme_demo/alt_cs_12.png)
+
+And you can preprocess the color space with t-SNE for improved color separation
+in some circumstances
+
+```r
+scales::show_col(distinctColorPalette(12, altCol=TRUE, runTsne=TRUE), labels=FALSE)
+```
+
+![](readme_demo/alt_cs_tsne_12.png)
 
 ## Installation from Github
 
