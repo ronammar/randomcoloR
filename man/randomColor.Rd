@@ -28,4 +28,3 @@ randomColor(hue="pink")
 
 randomColor(10, luminosity="light")
 }
-

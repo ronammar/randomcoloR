@@ -13,7 +13,7 @@ Description: Simple methods to generate attractive random colors. The random
 License: CC0
 BugReports: https://github.com/ronammar/randomcoloR/issues
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Imports: colorspace,
     stringr,
     V8,

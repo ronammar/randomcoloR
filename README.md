@@ -40,8 +40,8 @@ library(maps)
 
 states_map <- map_data("state")
 
-ggplot(states_map, aes(x=long, y=lat, group=group)) +
-  geom_polygon(aes(fill=region), color="black") +
+ggplot(states_map, aes(x=long, y=lat, group=group, fill=region)) +
+  geom_polygon(color="black") +
   guides(fill=FALSE)
 ```
 *Which states are green?*

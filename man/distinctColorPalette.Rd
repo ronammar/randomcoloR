@@ -4,10 +4,14 @@
 \alias{distinctColorPalette}
 \title{Generate palettes of optimally distinct colors.}
 \usage{
-distinctColorPalette(k = 1)
+distinctColorPalette(k = 1, altCol = FALSE, runTsne = FALSE)
 }
 \arguments{
 \item{k}{number of colors (>= 1). May be ineffective for k > 40.}
+
+\item{altCol}{Use an alternate color space}
+
+\item{runTsne}{Preprocess color space with t-SNE to obtain distinct colors. Reduces performance.}
 }
 \value{
 A character vector of k optimally distinct colors in hexadecimal codes.
@@ -16,4 +20,3 @@ A character vector of k optimally distinct colors in hexadecimal codes.
 Inspired by the the theory from http://tools.medialab.sciences-po.fr/iwanthue/theory.php
 For more info, also see https://en.wikipedia.org/wiki/Lab_color_space
 }
-
