@@ -18,4 +18,8 @@ Imports: colorspace,
     stringr,
     V8,
     stats,
-    methods
+    methods,
+    scales,
+    Rtsne,
+    grDevices,
+    cluster

@@ -38,6 +38,7 @@ randomColor <- function(count=1,
 #' @param runTsne Preprocess color space with t-SNE to obtain distinct colors. Reduces performance.
 #' @return A character vector of k optimally distinct colors in hexadecimal codes.
 #' @export
+#' @import cluster Rtsne
 distinctColorPalette <-function(k=1, altCol=FALSE, runTsne=FALSE) {
   currentColorSpace <- ourColorSpace@coords
   if (altCol) {
