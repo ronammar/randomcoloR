@@ -35,20 +35,32 @@ randomColor <- function(count=1,
 #'
 #' @param k number of colors (>= 1). May be ineffective for k > 40.
 #' @param altCol Use an alternate color space
+#' @param runTsne Preprocess color space with t-SNE to obtain distinct colors. Reduces performance.
 #' @return A character vector of k optimally distinct colors in hexadecimal codes.
 #' @export
-distinctColorPalette <-function(k=1, altCol=FALSE) {
+distinctColorPalette <-function(k=1, altCol=FALSE, runTsne=FALSE) {
   currentColorSpace <- ourColorSpace@coords
   if (altCol) {
     currentColorSpace <- alternateColorSpace
   }
 
-  # Set iter.max to 20 to avoid convergence warnings.
-  km <- kmeans(currentColorSpace, k, iter.max=20)
-  if (altCol) {
-    colors <- rgb(round(km$centers), maxColorValue=255)
+  if (runTsne) {
+    # Run 2D t-SNE before clustering
+    tsne <- Rtsne(currentColorSpace, perplexity=50, check_duplicates=FALSE, pca=FALSE, max_iter=500)
+    pamx <- pam(tsne$Y, k)  # k-medoids
+    if (altCol) {
+      colors <- rgb(currentColorSpace[pamx$id.med, ], maxColorValue=255)
+    } else {
+      colors <- hex(LAB(currentColorSpace[pamx$id.med, ]))
+    }
   } else {
-    colors <- unname(hex(LAB(km$centers)))
+    # Set iter.max to 20 to avoid convergence warnings.
+    km <- kmeans(currentColorSpace, k, iter.max=20)
+    if (altCol) {
+      colors <- rgb(round(km$centers), maxColorValue=255)
+    } else {
+      colors <- unname(hex(LAB(km$centers)))
+    }
   }
 
   return(colors)
