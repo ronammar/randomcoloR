@@ -1,4 +1,5 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomcoloR)](https://cran.r-project.org/package=randomcoloR)
+[![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/randomcoloR)](https://CRAN.R-project.org/package=randomcoloR)
 
 # randomcoloR
 
